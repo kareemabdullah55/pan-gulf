@@ -1,0 +1,245 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #800020; /* نبيتي */
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* عشان ينزل الناف تحت اللوجو في الموبايل */
+}
+
+header .logo {
+  height: 60px;
+  max-width: 100%;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section h1, .section h2 {
+  margin-bottom: 20px;
+  color: #800020;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.intro .text {
+  flex: 1 1 300px;
+}
+
+.intro .image {
+  display: flex;
+  flex: 1 1 300px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.intro .image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Expertise */
+.expertise .card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.expertise img {
+  width: 250px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Products Carousel */
+.product-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  width: 80%;
+  padding: 10px;
+}
+
+.product-gallery::-webkit-scrollbar {
+  display: none; /* إخفاء الاسكرول على كروم وسفاري */
+}
+
+.product-gallery img {
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.prev, .next {
+  position: absolute;
+  background: #800020;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Quality */
+.quality .card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.quality img {
+  width: 300px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Services */
+.services-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.services-gallery img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #800020;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+/* موبايل */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding: 40px 5%;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro .text {
+    text-align: center;
+  }
+
+  .expertise .card,
+  .quality .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .product-gallery img {
+    height: 200px;
+  }
+
+  .services-gallery img {
+    width: 150px;
+  }
+}
+
+/* شاشات صغيرة جداً */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-gallery img {
+    height: 150px;
+  }
+
+  .services-gallery img {
+    width: 120px;
+  }
+}
